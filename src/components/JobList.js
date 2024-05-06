@@ -44,6 +44,7 @@ const JobList = ({ filters }) => {
       rootMargin: "0px",
       threshold: 0.1,
     };
+    //code for infinite scroll
     observer.current = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && !loading) {
         fetchData();
@@ -57,7 +58,7 @@ const JobList = ({ filters }) => {
     <Grid container spacing={5} style={{ height: "600px", overflowY: "auto" }}>
       {jobs
         .filter((job) => {
-          let include = true;
+          let include = true; //for filter purpose include this jobs
           if (filters.companyName) {
             include =
               include &&
