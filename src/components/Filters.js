@@ -77,7 +77,12 @@ const Filters = ({ onApplyFilters }) => {
           <MenuItem value="onsite">On-site</MenuItem>
         </Select>
       </FormControl>
-      <Button variant="contained" color="primary" onClick={handleApplyFilters}>
+      <Button
+        className="apply-filter"
+        variant="contained"
+        color="primary"
+        onClick={handleApplyFilters}
+      >
         Apply Filters
       </Button>
     </div>
