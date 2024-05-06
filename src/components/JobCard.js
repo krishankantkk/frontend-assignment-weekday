@@ -43,7 +43,8 @@ const JobCard = ({ job }) => {
           </Typography>
           <Typography>
             <b>Estimate Salary- </b>
-            {job.minJdSalary}-{job.maxJdSalary}
+            {job.minJdSalary ? job.minJdSalary : job.maxJdSalary}-
+            {job.maxJdSalary ? job.maxJdSalary : job.minJdSalary}
             {job.salaryCurrencyCode}
           </Typography>
           <Typography variant="subtitle1">

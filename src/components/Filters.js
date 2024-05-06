@@ -13,9 +13,8 @@ const Filters = ({ onApplyFilters }) => {
     minExp: "",
     companyName: "",
     location: "",
-    techStack: "",
     jobRole: "",
-    maxJdSalary: "",
+    minJdSalary: "",
     remoteOnSite: "",
   });
 
@@ -48,12 +47,7 @@ const Filters = ({ onApplyFilters }) => {
         value={filters.location}
         onChange={handleChange}
       />
-      <TextField
-        label="Tech Stack"
-        name="techStack"
-        value={filters.techStack}
-        onChange={handleChange}
-      />
+
       <TextField
         label="Role"
         name="jobRole"
@@ -61,7 +55,7 @@ const Filters = ({ onApplyFilters }) => {
         onChange={handleChange}
       />
       <TextField
-        label="Min Base Pay"
+        label="Min Base Pay USD"
         name="minJdSalary"
         value={filters.minJdSalary}
         onChange={handleChange}
